@@ -12,6 +12,19 @@ const { Navigator, Screen } = createStackNavigator();
 const HomeNavigator = () => (
     <Navigator headerMode="screen" mode='modal' >
       <Screen 
+        name="Workout" 
+        component={Workout} 
+        options={
+            {
+              title: 'Days',
+              headerStyle: styles.header,
+              headerTitleAlign: 'center',
+              headerTintColor: 'white',
+              headerTitleStyle: styles.headerText,
+            }
+        }
+        />
+      {/* <Screen 
         name="Gym Homie" 
         component={Home} 
         options={
@@ -21,8 +34,8 @@ const HomeNavigator = () => (
           headerTintColor: 'white',
           headerTitleStyle: styles.headerText,
         }
-        }/>
-      <Screen 
+        }/> */}
+      {/* <Screen 
         name="Your Programs" 
         component={Programs} 
         options={
@@ -33,20 +46,7 @@ const HomeNavigator = () => (
               headerTitleStyle: styles.headerText,
             }
         }
-        />
-      <Screen 
-        name="Workout" 
-        component={Workout} 
-        options={
-            {
-              title: 'Day Selection',
-              headerStyle: styles.header,
-              headerTitleAlign: 'center',
-              headerTintColor: 'white',
-              headerTitleStyle: styles.headerText,
-            }
-        }
-        />
+        /> */}
         <Screen 
           name='DayPage'
           component={DayPage}
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#585858',
         borderBottomColor: 'black',
         borderBottomWidth: 3,
-        borderBottomStyle: 'solid',
+        borderStyle: 'solid',
     },
     headerText: {
         color: 'white',
